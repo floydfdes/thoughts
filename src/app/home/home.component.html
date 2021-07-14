@@ -1,5 +1,5 @@
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened class='side-nav-bar'>
+    <mat-drawer [mode]="mode ? 'side' : 'over'" #sideNav [(opened)]='opened' class='side-nav-bar'>
         <mat-nav-list role="navigation" class="mat-nav-list mat-list-base ng-tns-c132-44"><a mat-list-item=""
                 routerlinkactive="docs-component-viewer-sidenav-item-selected"
                 class="mat-list-item mat-focus-indicator ng-tns-c132-44 ng-star-inserted" aria-current="false"
@@ -28,5 +28,12 @@
         </mat-nav-list>
 
     </mat-drawer>
-    <mat-drawer-content id='main-content'>Main content</mat-drawer-content>
+    <mat-drawer-content id='main-content'>
+        <button class="sidenave-toggle-btn" id="sideNavBtn" (click)="sideNav.toggle()">
+            Side nav toggle
+        </button>
+        <h1>
+            Home
+        </h1>
+    </mat-drawer-content>
 </mat-drawer-container>
