@@ -1,0 +1,37 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer [mode]="mode ? 'side' : 'over'" #sideNav [(opened)]='opened' class='side-nav-bar'>
+        <mat-nav-list role="navigation" class="mat-nav-list mat-list-base ng-tns-c132-44"><a mat-list-item=""
+                routerlinkactive="docs-component-viewer-sidenav-item-selected"
+                class="mat-list-item mat-focus-indicator ng-tns-c132-44 ng-star-inserted" aria-current="false"
+                href="/home">
+                <div class="mat-list-item-content">
+                    <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                    <div class="mat-list-text"></div> Home
+                </div>
+            </a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected"
+                class="mat-list-item mat-focus-indicator ng-tns-c132-44 ng-star-inserted" aria-current="false"
+                href="/about">
+                <div class="mat-list-item-content">
+                    <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                    <div class="mat-list-text"></div> About
+                </div>
+            </a>
+            <a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected"
+                class="mat-list-item mat-focus-indicator ng-tns-c132-44 ng-star-inserted" aria-current="false"
+                href="/profile">
+                <div class="mat-list-item-content">
+                    <div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div>
+                    <div class="mat-list-text"></div> Profile
+                </div>
+            </a>
+            <!---->
+        </mat-nav-list>
+
+    </mat-drawer>
+    <mat-drawer-content id='main-content'>
+        <button class="sidenave-toggle-btn" id="sideNavBtn" (click)="sideNav.toggle()">
+            Side nav toggle
+        </button>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

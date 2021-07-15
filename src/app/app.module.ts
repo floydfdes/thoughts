@@ -9,13 +9,17 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

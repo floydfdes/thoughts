@@ -2,11 +2,12 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-sidenav',
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class SidenavComponent implements OnInit {
+
   opened = true;
   mode = true;
   constructor(
@@ -32,12 +33,11 @@ export class HomeComponent implements OnInit {
       this.mode = false
     }
   }
-  hasRoute(route: string) {
-    return this.router.url.includes(route);
-  }
+
 
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.resizeWindowFunction();
   }
+
 }

@@ -1,0 +1,29 @@
+.example-container {
+  //   width: 400px;
+  height: 100vh !important;
+  margin: 10px;
+  border-radius: 10px;
+}
+.side-nav-bar {
+  width: 240px;
+  background: dodgerblue;
+  border-radius: 10px;
+  padding: 5px;
+}
+#main-content {
+  //   background: dodgerblue;
+  border-radius: 10px;
+  padding: 20px 50px;
+}
+
+mat-nav-list > a:hover {
+  background: blue;
+}
+.mat-list-item {
+  color: white !important;
+  font-size: 18px;
+  font-weight: bold;
+}
+.sidenave-toggle-btn {
+  display: none;
+}
